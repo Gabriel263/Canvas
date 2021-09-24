@@ -1,184 +1,104 @@
-*{
-    padding: 0;
-    margin: 0;
-    background-color: gray;
-}
-button{
-    border: none;
-}
-.container{
-    width: 100%;
-    height:100%;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #3232;
-   
-}
-.main{  
-    position: relative;
-    background-color: #ddd;
-    width:24%;
-    min-width: 325px; 
-    min-height: 500px;
-    height: auto;
-    margin: 0.5% 0.5% 0.5% 0.5%;
-    border-radius: 5px;
-    top: 5%;
-    
-    
-}
-.top {
-    height: 50px;
-    position: relative;
-    overflow-y: hidden; 
-    color:black;
-    border-bottom: 1px solid #333;
-    background-color: #ddd; 
-}
-.top h2{ margin-top: 10px; text-align: center;font-size: 18px; background-color: #ddd;}
-.mid{
-    padding:5px;
-    height: 450px;
-    background-color: #ddd;
-    overflow: auto;
-}
-.bot{
-    border-top:1px solid #333;
-    height: 50px;
-    width:100%;
-    font-size: 18px;
-    color:black;
-    bottom: 0;
-    background-color: #ddd;
-    
-}
-.btn_center{
-    position:relative;
-    height:50px;
-    margin-left: auto;
-    margin-right: auto;
-    width:85px;
-    background-color: #ddd;
-}
-.pop_up{
-    position: relative;
-    width: 90%;
-    height: auto;
-    background-color: #92d050;
-    padding:2%;
-    margin-left:auto;
-    margin-right: auto;
-    margin-top:10px;
-    margin-bottom: 10px;
-    display: none;
-    border: 1px solid black;
-}
+/*Reseta os espaçamentos da página e determina a cor de fundo*/
+    *{
+        padding: 0;
+        margin: 0;
+        background-color: gray;
+    }
+/*Reseta os espaçamentos da página e determina a cor de fundo*/
 
-.close{
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    margin: 10px;
-    right: 0%;
-    background-color: #92d050;
-    cursor: pointer;
-}
-.content1{
-    margin: 15px;
-    position: relative;
-    font-family: sans-serif;
-    font-size: 20px;
-    color:black;
-    
-    background-color: #92d050;
-    margin-top: 5%;
-}
-.content2{
-    position: relative;
-    font-family: sans-serif;
-    font-size: 20px;
-    margin: 5% 5% 0% 5%;
-    background-color: #92d050;
-    color: black;
-    top: 10%;
-}
-.titulo_Postit{
-    border-bottom: 2px solid black;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    position: relative;
-    top: 5%;
-    width: 90%;
-    font-size: 20px;
-    margin-left: 5%;
-    margin-right: 5%;
-    background-color: #92d050;
-    color: black;
-}
-.texto_Postit{
-    border-bottom: 2px solid black;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    position: relative;
-    top: 12%;
+/*Retira a utilização de borda no elemento button*/
+    button{
+        border: none;
+    }
+/*Retira a utilização de borda no elemento button*/
 
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    font-size: 20px;
-    background-color: #92d050;
-    color: black;
-}
-.fonte_choises, .fundo_choises, .cores{
-    position: relative;
-    top: 25%;
-    font-size:20px;
-    font-family: sans-serif;
-    background-color: #92d050;
-    color: black;
-    margin: 10px;
-    border: none;
-}
-.areatexto{
-    position:relative;
-    width: 90%;
-    height: 75px;
-    left:5%;
-    max-height: 150px;
-    color:black;
-    font-size: 20px;
-    background-color: #ddd;
-}
-.confirmar{
-    background-color: #0000ff;
-    color: #fff;
-    font-family: sans-serif;
-    font-size: 15px;
-    padding: 5px;
-    border-radius: 10px;
-    position: relative;
-    left: 35%;
-    margin: 10px;
-    top: 90%;
-}
-.confirmar:hover{
-    background-color: rgb(60, 64, 66, .8);
-}
+/*Especifica o espaço a ser usado pelo elemento e os define como flexiveis sendo pocisionados em linhas diferentes*/
+    .container{
+        width: 100%;
+        height:100%;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #3232;
+    }
+/*Especifica o espaço a ser usado pelo elemento e os define como flexiveis sendo pocisionados em linhas diferentes*/
 
-.add_div{
-    position:relative;
-    color: #fff;
-    font-family: sans-serif;
-    font-size: 18px;
-    background-color: blue;
-    margin-top:10px;
-    margin-left:auto;
-    margin-right: auto;
-    border-radius: 5px;
-    padding: 5px;
-    text-align: center;
-    
+/*Define a posição, o tamanho com um minimo, cor de fundo, arredonda a margem e da um espaçamento externo*/
+    .main{  
+        position: relative;
+        background-color: #ddd;
+        width:24%;
+        min-width: 325px;
+        min-height: 500px;
+        height: auto;
+        margin: 0.5% 0.5% 0.5% 0.5%;
+        border-radius: 5px;
+        top: 5%;
+    }
+/*Define a posição, o tamanho com um minimo, cor de fundo, arredonda a margem e da um espaçamento externo*/
 
-}
+/*Determina a altura, cor da fonte e fundo, borda inferior, e mantém a barra de rolagem no eixo y escondida*/
+    .top {
+        height: 50px;
+        overflow-y: hidden;
+        color:black;
+        border-bottom: 1px solid #333;
+        background-color: #ddd;
+    }
+/*Determina a altura, cor da fonte e fundo, borda inferior, e mantém a barra de rolagem no eixo y escondida*/
+
+/*Define a cor de fundo, a fonte, centraliza a texto, e coloca um espaçamento na parte superior*/
+    .top h2{
+        margin-top: 10px;
+        text-align: center;
+        font-size: 18px;
+        background-color: #ddd;
+    }
+/*Define a cor de fundo, a fonte, centraliza a texto, e coloca um espaçamento na parte superior*/
+
+/*Faz que barra de rolagens aparecem se necessário, define espaçamento interno, cor de funso e altura*/
+    .mid{
+        padding:5px;
+        height: 450px;
+        background-color: #ddd;
+        overflow: auto;
+    }
+/*Faz que barra de rolagens aparecem se necessário, define espaçamento interno, cor de funso e altura*/
+
+/*Especifica a cor da fonte e fundo, fonte, posição, tamanho e uma borda superior*/
+    .bot{
+        border-top:1px solid #333;
+        height: 50px;
+        width:100%;
+        font-size: 18px;
+        color:black;
+        bottom: 0;
+        background-color: #ddd;
+    }
+/*Especifica a cor da fonte e fundo, fonte, posição, tamanho e uma borda superior*/
+
+/*Define a posição e o tamanho da div juntamente com a cor de fundo*/
+    .btn_center{
+        position:relative;
+        height:50px;
+        margin-left: auto;
+        margin-right: auto;
+        width:85px;
+        background-color: #ddd;
+    }
+/*Define a posição e o tamanho da div juntamente com a cor de fundo*/
+
+/*Define a posição do elemento e o seu comportamento, junto com a cor de fundo e fonte, a fonte utilizada e o seu tamanho*/
+    .add_div{
+        position:relative;
+        color: #fff;
+        font-family: sans-serif;
+        font-size: 18px;
+        background-color: blue;
+        margin-top:10px;
+        margin-left:auto;
+        margin-right: auto;
+        border-radius: 5px;
+        padding: 5px;
+        text-align: center;
+    }
+/*Define a posição do elemento e o seu comportamento, junto com a cor de fundo e fonte, a fonte utilizada e o seu tamanho*/

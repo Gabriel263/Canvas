@@ -4,14 +4,12 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="../css/canvas.css">
+        <link rel="stylesheet" href="../css/canvas_pop_up.css">
         <script defer src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
         <script defer src="https://www.gstatic.com/firebasejs/8.6.3/firebase-auth.js"></script>
         <script defer src="https://www.gstatic.com/firebasejs/8.6.3/firebase-database.js"></script>
-        <script defer src="../js/firebase_config.js"></script> 
-        <script defer src="../js/canvas1.js"></script>
-        <script defer src="../js/canvas2.js"></script>
-        <script defer src="../js/canvas3.js"></script>
-        <script defer src="../js/canvas4.js"></script>
+        <script defer src="../js/firebase_config.js"></script>
+        <script defer src="../js/canvas_pop_up.js"></script>
         <script defer src="../js/getinfocanvas.js"></script>
         <script defer src="../js/canvas_functions.js"></script>
         <script defer src="../js/canvas_div.js"></script>
@@ -19,22 +17,36 @@
     
     </head>
     <body>
-
+        <!--conteiner é definido para que os elementos possam ser distribuidos de forma reponsiva pelo quantidade de pixels no monitor de cada usuário-->
         <div class="container">
+
+            <!--Main é utilizada para definir a separação visual de cada canvas-->
+            <!--Definição da estrutura do primeiro canvas-->
             <div class="main" >
                 <div class="top">
                     <h2>Metas</h2>
                 </div>
 
+                <!--Definição da área e sua estrutura que irá conter as divs que serão geradas-->
                 <div class="mid"id="col1">
                     <div class="pop_up" id="pop_up1">
                         <img class="close" id="img_closePop_up1" src="../img/cancel.png"></br>
-                        <label class="content1">Título:</label></br>
-                        <input type="text" id="tittle1" class="titulo_Postit" value=""></br></br>
-                        <label class="content2">Descrição:</label></br>
-                        <textarea class="areatexto" name="Descrição"  id="areatexto1" cols="30" rows="10"></textarea></br>
-                        <label class="cores">Fonte: </label>
 
+                        <!--Áreas de digitação-->
+                        <label class="content1">Título:</label>
+                        </br>
+                        <input type="text" id="tittle1" class="titulo_Postit" value="">
+                    
+                        </br></br>
+
+                        <label class="content2">Descrição:</label>
+                        </br>
+                        <textarea class="areatexto" name="Descrição" autocapitalize="words" spellcheck="true"  id="areatexto1" cols="30" rows="10"></textarea>
+                        </br>
+                        <!--Áreas de digitação-->
+                        
+                        <!--Área para escolher a cor da fonte-->
+                        <label class="cores">Fonte: </label>
                         <select id="choises_fon1" class="fonte_choises">
                             <option class="blackFon" selected value="black">Preto</option>
                             <option class="whiteFon" value="white">Branco</option>
@@ -45,7 +57,11 @@
                             <option class="yellowFon" value="yellow">Amarelo</option>
                             <option class="brownFon" value="brown">Marrom</option>
                         </select>
+                        <!--Área para escolher a cor da fonte-->
+
                         </br>
+
+                        <!--Área para escolher a cor do fundo-->
                         <label class="cores">Fundo:</label>
                         <select id="choises_fun1" class="fundo_choises">
                             <option id="blackFun" selected value="black">Preto</option>
@@ -56,32 +72,54 @@
                             <option id="pinkFun" value="pink">Rosa</option>
                             <option id="yellowFun" value="yellow">Amarelo</option>
                             <option id="brownFun" value="brown">Marrom</option>
-                        </select></br>
+                        </select>
+                        <!--Área para escolher a cor do fundo-->
+
+                        </br>
+                
                         <button id="confirmar1" class="confirmar" onclick="newdiv1()">Confirmar</button>
                     </div>
                 </div>
-                   
+                <!--Definição da área e sua estrutura que irá conter as divs que serão geradas-->
+
+                <!--Div para separar o button para uma melhor estilização-->
                 <div class="bot">
                     <div class="btn_center">
                         <button class="add_div" id="canvas1">Adicionar</button>
                     </div>     
                 </div>
+                <!--Div para separar o button para uma melhor estilização-->
                 
             </div>
+            <!--Definição da estrutura do primeiro canvas-->
+            <!--Main é utilizada para definir a separação visual de cada canvas-->
 
+            <!--Main é utilizada para definir a separação visual de cada canvas-->
+            <!--Definição da estrutura do segundo canvas-->
             <div class="main" >
                 <div class="top">
                     <h2>Metas2</h2>
                 </div>
             
+                <!--Definição da área e sua estrutura que irá conter as divs que serão geradas-->
                 <div class="mid" id="col2">
                     <div class="pop_up" id="pop_up2">
                         <img class="close" id="img_closePop_up2" src="../img/cancel.png"></br>
-                        <label class="content1">Título:</label></br>
-                        <input type="text" id="tittle2" class="titulo_Postit" value=""></br></br>
-                        <label class="content2">Descrição:</label></br>
-                        <textarea class="areatexto" name="Descrição" autocapitalize="words" spellcheck="true" id="areatexto2" cols="30" rows="10"></textarea></br>
+
+                        <!--Áreas de digitação-->
+                        <label class="content1">Título:</label>
+                        </br>
+                        <input type="text" id="tittle2" class="titulo_Postit" value="">
                     
+                        </br></br>
+
+                        <label class="content2">Descrição:</label>
+                        </br>
+                        <textarea class="areatexto" name="Descrição" autocapitalize="words" spellcheck="true" id="areatexto2" cols="30" rows="10"></textarea>
+                        </br>
+                        <!--Áreas de digitação-->
+                    
+                        <!--Área para escolher a cor da fonte-->
                         <label class="cores">Fonte:</label>
                         <select id="choises_fon2" class="fonte_choises">
                             <option class="blackFon" selected value="black">Preto</option>
@@ -93,8 +131,11 @@
                             <option class="yellowFon" value="yellow">Amarelo</option>
                             <option class="brownFon" value="brown">Marrom</option>
                         </select>
+                        <!--Área para escolher a cor da fonte-->
+
                         </br>
                         
+                        <!--Área para escolher a cor do fundo-->
                         <label class="cores">Fundo:</label>
                         <select id="choises_fun2" class="fundo_choises">
                             <option id="blackFun" selected value="black">Preto</option>
@@ -105,10 +146,14 @@
                             <option id="pinkFun" value="pink">Rosa</option>
                             <option id="yellowFun" value="yellow">Amarelo</option>
                             <option id="brownFun" value="brown">Marrom</option>
-                        </select></br>
+                        </select>
+                        <!--Área para escolher a cor do fundo-->
+                        
+                        </br>
                         <button id="confirmar2" class="confirmar" onclick="newdiv2()">Confirmar</button>
                     </div> 
                 </div>
+                <!--Definição da área e sua estrutura que irá conter as divs que serão geradas-->
                 
             <div class="bot">
                 <div class="btn_center">
@@ -122,14 +167,27 @@
                 <div class="top">
                     <h2>Metas3</h2>
                 </div>
+
+                <!--Definição da área e sua estrutura que irá conter as divs que serão geradas-->
                 <div class="mid" id="col3">
                     <div class="pop_up" id="pop_up3">
+                        
                         <img class="close" id="img_closePop_up3" src="../img/cancel.png"></br>
-                        <label class="content1">Título:</label></br>
-                        <input type="text" id="tittle3" class="titulo_Postit" value=""></br></br>
-                        <label class="content2">Descrição:</label></br>
-                        <textarea class="areatexto" name="Descrição" id="areatexto3" cols="30" rows="10" ></textarea></br>
 
+                        <!--Áreas de digitação-->
+                        <label class="content1">Título:</label>
+                        </br>
+                        <input type="text" id="tittle3" class="titulo_Postit" value="">
+
+                        </br></br>
+
+                        <label class="content2">Descrição:</label>
+                        </br>
+                        <textarea class="areatexto" name="Descrição" autocapitalize="words" spellcheck="true" id="areatexto3" cols="30" rows="10" ></textarea>
+                        </br>
+                        <!--Áreas de digitação-->
+
+                        <!--Área para escolher a cor da fonte-->
                         <label class="cores">Fonte:</label>
                         <select id="choises_fon3" class="fonte_choises">
                             <option class="blackFon" selected value="black">Preto</option>
@@ -141,7 +199,11 @@
                             <option class="yellowFon" value="yellow">Amarelo</option>
                             <option class="brownFon" value="brown">Marrom</option>
                         </select>
+                        <!--Área para escolher a cor da fonte-->
+
                         </br>
+
+                        <!--Área para escolher a cor do fundo-->
                         <label class="cores">Fundo:</label>
                         <select id="choises_fun3" class="fundo_choises">
                             <option id="blackFun" selected value="black">Preto</option>
@@ -152,10 +214,14 @@
                             <option id="pinkFun" value="pink">Rosa</option>
                             <option id="yellowFun" value="yellow">Amarelo</option>
                             <option id="brownFun" value="brown">Marrom</option>
-                        </select></br>
+                        </select>
+                        <!--Área para escolher a cor do fundo-->
+
+                        </br>
                         <button id="confirmar3" class="confirmar" onclick="newdiv3()">Confirmar</button>
                     </div>
                 </div>
+                <!--Definição da área e sua estrutura que irá conter as divs que serão geradas-->
 
             <div class="bot">
                 <div class="btn_center">
@@ -168,14 +234,26 @@
                 <div class="top">
                     <h2>Metas4</h2>
                 </div>
+
+                <!--Definição da área e sua estrutura que irá conter as divs que serão geradas-->
                 <div class="mid" id="col4">
                     <div class="pop_up" id="pop_up4">
                         <img class="close" id="img_closePop_up4" src="../img/cancel.png"></br>
-                        <label class="content1">Título:</label></br>
-                        <input type="text" id="tittle4" class="titulo_Postit" value=""></br></br>
-                        <label class="content2">Descrição:</label></br>
-                        <textarea class="areatexto" name="Descrição" id="areatexto4" cols="30" rows="10" ></textarea></br>
 
+                        <!--Áreas de digitação-->
+                        <label class="content1">Título:</label>
+                        </br>
+                        <input type="text" id="tittle4" class="titulo_Postit" value="">
+
+                        </br></br>
+
+                        <label class="content2">Descrição:</label>
+                        </br>
+                        <textarea class="areatexto" name="Descrição" autocapitalize="words" spellcheck="true" id="areatexto4" cols="30" rows="10" ></textarea>
+                        </br>
+                        <!--Áreas de digitação-->
+
+                        <!--Área para escolher a cor da fonte-->
                         <label class="cores">Fonte:</label>
                         <select id="choises_fon4" class="fonte_choises">
                             <option class="blackFon" selected value="black">Preto</option>
@@ -187,7 +265,11 @@
                             <option class="yellowFon" value="yellow">Amarelo</option>
                             <option class="brownFon" value="brown">Marrom</option>
                         </select>
+                        <!--Área para escolher a cor da fonte-->
+
                         </br>
+
+                        <!--Área para escolher a cor do fundo-->
                         <label class="cores">Fundo:</label>
                         <select id="choises_fun4" class="fundo_choises">
                             <option id="blackFun" selected value="black">Preto</option>
@@ -198,10 +280,14 @@
                             <option id="pinkFun" value="pink">Rosa</option>
                             <option id="yellowFun" value="yellow">Amarelo</option>
                             <option id="brownFun" value="brown">Marrom</option>
-                        </select></br>
+                        </select>
+                        <!--Área para escolher a cor do fundo-->
+                    
+                    </br>
                         <button id="confirmar4" class="confirmar" onclick="newdiv4()">Confirmar</button>
                     </div>
                 </div>
+                <!--Definição da área e sua estrutura que irá conter as divs que serão geradas-->
 
             <div class="bot">
                 <div class="btn_center">
