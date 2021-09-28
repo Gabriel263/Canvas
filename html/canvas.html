@@ -5,6 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="../css/canvas.css">
         <link rel="stylesheet" href="../css/canvas_pop_up.css">
+        <link rel="stylesheet" href="../css/Titulo_canvas.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
         <script defer src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
         <script defer src="https://www.gstatic.com/firebasejs/8.6.3/firebase-auth.js"></script>
         <script defer src="https://www.gstatic.com/firebasejs/8.6.3/firebase-database.js"></script>
@@ -14,6 +18,7 @@
         <script defer src="../js/canvas_functions.js"></script>
         <script defer src="../js/canvas_div.js"></script>
         <script defer src="../js/drag&drop.js"></script>
+        <script defer src="../js/tittle_canvas.js"></script>
     
     </head>
     <body>
@@ -24,13 +29,24 @@
             <!--Definição da estrutura do primeiro canvas-->
             <div class="main" >
                 <div class="top">
-                    <h2>Metas</h2>
+                    <h2 id="titulo1">Exemplo1</h2>
+                    <img class="editar" id="lapis1" src="../img/lapis.png">
                 </div>
 
                 <!--Definição da área e sua estrutura que irá conter as divs que serão geradas-->
                 <div class="mid"id="col1">
+
+                    <!--Área na qual o usuário digita o título desejado para o canvas em questão-->
+                    <div id="div_to_label1" class="div_to_label">
+                        <label class="label_to_input" id="label_to_input1">Digite o título para a canvas:</label>
+                        <input type="text" class="canvas_tittle" id="canvas_tittle1">
+                        <button type="button" class="button_tittle" id="button_tittle1">Enviar</button>
+                        <img class="tittle_close" id="tittle_close1" src="../img/close.png">
+                    </div>
+                    <!--Área na qual o usuário digita o título desejado para o canvas em questão-->
+
                     <div class="pop_up" id="pop_up1">
-                        <img class="close" id="img_closePop_up1" src="../img/cancel.png"></br>
+                        <img class="close" id="img_closePop_up1" src="../img/close.png"></br>
 
                         <!--Áreas de digitação-->
                         <label class="content1">Título:</label>
@@ -46,7 +62,7 @@
                         <!--Áreas de digitação-->
                         
                         <!--Área para escolher a cor da fonte-->
-                        <label class="cores">Fonte: </label>
+                        <label class="cores">Cor da fonte: </label>
                         <select id="choises_fon1" class="fonte_choises">
                             <option class="blackFon" selected value="black">Preto</option>
                             <option class="whiteFon" value="white">Branco</option>
@@ -62,7 +78,7 @@
                         </br>
 
                         <!--Área para escolher a cor do fundo-->
-                        <label class="cores">Fundo:</label>
+                        <label class="cores">Cor de fundo:</label>
                         <select id="choises_fun1" class="fundo_choises">
                             <option id="blackFun" selected value="black">Preto</option>
                             <option id="whiteFun" value="white">Branco</option>
@@ -98,13 +114,24 @@
             <!--Definição da estrutura do segundo canvas-->
             <div class="main" >
                 <div class="top">
-                    <h2>Metas2</h2>
+                    <h2 id="titulo2">Exemplo2</h2>
+                    <img class="editar" id="lapis2" src="../img/lapis.png">
                 </div>
             
                 <!--Definição da área e sua estrutura que irá conter as divs que serão geradas-->
                 <div class="mid" id="col2">
+
+                    <!--Área na qual o usuário digita o título desejado para o canvas em questão-->
+                    <div id="div_to_label2" class="div_to_label">
+                        <label class="label_to_input" id="label_to_input2">Digite o título para a canvas:</label>
+                        <input type="text" class="canvas_tittle" id="canvas_tittle2">
+                        <button type="button" class="button_tittle" id="button_tittle2">Enviar</button>
+                        <img class="tittle_close" id="tittle_close2" src="../img/close.png">
+                    </div>
+                    <!--Área na qual o usuário digita o título desejado para o canvas em questão-->
+
                     <div class="pop_up" id="pop_up2">
-                        <img class="close" id="img_closePop_up2" src="../img/cancel.png"></br>
+                        <img class="close" id="img_closePop_up2" src="../img/close.png"></br>
 
                         <!--Áreas de digitação-->
                         <label class="content1">Título:</label>
@@ -120,7 +147,7 @@
                         <!--Áreas de digitação-->
                     
                         <!--Área para escolher a cor da fonte-->
-                        <label class="cores">Fonte:</label>
+                        <label class="cores">Cor da fonte:</label>
                         <select id="choises_fon2" class="fonte_choises">
                             <option class="blackFon" selected value="black">Preto</option>
                             <option class="whiteFon" value="white">Branco</option>
@@ -136,7 +163,7 @@
                         </br>
                         
                         <!--Área para escolher a cor do fundo-->
-                        <label class="cores">Fundo:</label>
+                        <label class="cores">Cor de fundo:</label>
                         <select id="choises_fun2" class="fundo_choises">
                             <option id="blackFun" selected value="black">Preto</option>
                             <option id="whiteFun" value="white">Branco</option>
@@ -155,24 +182,36 @@
                 </div>
                 <!--Definição da área e sua estrutura que irá conter as divs que serão geradas-->
                 
-            <div class="bot">
-                <div class="btn_center">
-                    <button class="add_div" id="canvas2">Adicionar</button>
-                </div>  
+                <!--Div para separar o button para uma melhor estilização-->
+                <div class="bot">
+                    <div class="btn_center">
+                        <button class="add_div" id="canvas2">Adicionar</button>
+                    </div>  
+                </div>
+                <!--Div para separar o button para uma melhor estilização-->
             </div>
-
-        </div>
                 
             <div class="main" >
                 <div class="top">
-                    <h2>Metas3</h2>
+                    <h2 id="titulo3">Exemplo3</h2>
+                    <img class="editar" id="lapis3" src="../img/lapis.png">
                 </div>
 
                 <!--Definição da área e sua estrutura que irá conter as divs que serão geradas-->
                 <div class="mid" id="col3">
+
+                    <!--Área na qual o usuário digita o título desejado para o canvas em questão-->
+                    <div id="div_to_label3" class="div_to_label">
+                        <label class="label_to_input" id="label_to_input3">Digite o título para a canvas:</label>
+                        <input type="text" class="canvas_tittle" id="canvas_tittle3">
+                        <button type="button" class="button_tittle" id="button_tittle3">Enviar</button>
+                        <img class="tittle_close" id="tittle_close3" src="../img/close.png">
+                    </div>
+                    <!--Área na qual o usuário digita o título desejado para o canvas em questão-->
+
                     <div class="pop_up" id="pop_up3">
                         
-                        <img class="close" id="img_closePop_up3" src="../img/cancel.png"></br>
+                        <img class="close" id="img_closePop_up3" src="../img/close.png"></br>
 
                         <!--Áreas de digitação-->
                         <label class="content1">Título:</label>
@@ -188,7 +227,7 @@
                         <!--Áreas de digitação-->
 
                         <!--Área para escolher a cor da fonte-->
-                        <label class="cores">Fonte:</label>
+                        <label class="cores">Cor da fonte:</label>
                         <select id="choises_fon3" class="fonte_choises">
                             <option class="blackFon" selected value="black">Preto</option>
                             <option class="whiteFon" value="white">Branco</option>
@@ -204,7 +243,7 @@
                         </br>
 
                         <!--Área para escolher a cor do fundo-->
-                        <label class="cores">Fundo:</label>
+                        <label class="cores">Cor de fundo:</label>
                         <select id="choises_fun3" class="fundo_choises">
                             <option id="blackFun" selected value="black">Preto</option>
                             <option id="whiteFun" value="white">Branco</option>
@@ -223,22 +262,35 @@
                 </div>
                 <!--Definição da área e sua estrutura que irá conter as divs que serão geradas-->
 
-            <div class="bot">
-                <div class="btn_center">
-                    <button class="add_div" id="canvas3">Adicionar</button>
+                <!--Div para separar o button para uma melhor estilização-->
+                <div class="bot">
+                    <div class="btn_center">
+                        <button class="add_div" id="canvas3">Adicionar</button>
+                    </div>
                 </div>
+                <!--Div para separar o button para uma melhor estilização-->
             </div>
-        </div>
 
             <div class="main" >
                 <div class="top">
-                    <h2>Metas4</h2>
+                    <h2 id="titulo4">Exemplo4</h2>
+                    <img class="editar" id="lapis4" src="../img/lapis.png">
                 </div>
 
                 <!--Definição da área e sua estrutura que irá conter as divs que serão geradas-->
                 <div class="mid" id="col4">
+
+                    <!--Área na qual o usuário digita o título desejado para o canvas em questão-->
+                    <div id="div_to_label4" class="div_to_label">
+                        <label class="label_to_input" id="label_to_input4">Digite o título para a canvas:</label>
+                        <input type="text" class="canvas_tittle" id="canvas_tittle4">
+                        <button type="button" class="button_tittle" id="button_tittle4">Enviar</button>
+                        <img class="tittle_close" id="tittle_close4" src="../img/close.png">
+                    </div>
+                    <!--Área na qual o usuário digita o título desejado para o canvas em questão-->
+
                     <div class="pop_up" id="pop_up4">
-                        <img class="close" id="img_closePop_up4" src="../img/cancel.png"></br>
+                        <img class="close" id="img_closePop_up4" src="../img/close.png"></br>
 
                         <!--Áreas de digitação-->
                         <label class="content1">Título:</label>
@@ -254,7 +306,7 @@
                         <!--Áreas de digitação-->
 
                         <!--Área para escolher a cor da fonte-->
-                        <label class="cores">Fonte:</label>
+                        <label class="cores">Cor da fonte:</label>
                         <select id="choises_fon4" class="fonte_choises">
                             <option class="blackFon" selected value="black">Preto</option>
                             <option class="whiteFon" value="white">Branco</option>
@@ -270,7 +322,7 @@
                         </br>
 
                         <!--Área para escolher a cor do fundo-->
-                        <label class="cores">Fundo:</label>
+                        <label class="cores">Cor de fundo:</label>
                         <select id="choises_fun4" class="fundo_choises">
                             <option id="blackFun" selected value="black">Preto</option>
                             <option id="whiteFun" value="white">Branco</option>
@@ -289,12 +341,13 @@
                 </div>
                 <!--Definição da área e sua estrutura que irá conter as divs que serão geradas-->
 
-            <div class="bot">
-                <div class="btn_center">
-                    <button class="add_div" id="canvas4">Adicionar</button>
+                <!--Div para separar o button para uma melhor estilização-->
+                <div class="bot">
+                    <div class="btn_center">
+                        <button class="add_div" id="canvas4">Adicionar</button>
+                    </div>
                 </div>
+                <!--Div para separar o button para uma melhor estilização-->
             </div>
-        </div>
-            
     </body>
 </html>

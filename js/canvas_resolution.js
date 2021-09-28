@@ -8,7 +8,3 @@ var l = largura.toString();
    document.getElementById('col2').style.minWidth=l+'px';
    document.getElementById('col3').style.minWidth=l+'px';
    document.getElementById('col4').style.minWidth=l+'px';
-
-
-    
-

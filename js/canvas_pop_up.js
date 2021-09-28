@@ -6,15 +6,19 @@
       switch(identificando){
           case 'canvas1':
             document.getElementById('pop_up1').style.display = 'block';
+            document.getElementById('div_to_label1').style.display = 'none';
             break;
           case 'canvas2':
             document.getElementById('pop_up2').style.display = 'block';
+            document.getElementById('div_to_label2').style.display = 'none';
             break;
           case 'canvas3':
             document.getElementById('pop_up3').style.display = 'block';
+            document.getElementById('div_to_label3').style.display = 'none';
             break;
           case 'canvas4':
             document.getElementById('pop_up4').style.display = 'block';
+            document.getElementById('div_to_label4').style.display = 'none';
             break;
       }
     })
